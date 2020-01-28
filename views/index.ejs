@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<body>  
+    <div id="element"></div>
+        <input type="button" onclick="location.href='sh'" value="show whole DB">
+        <input type="button" onclick="location.href='showDriv'" value="show names from DB">
+        <input type="button" onclick="location.href='upp'" value="show names from DB">
+        <span id="childElement"></span>
+        
+    <script>
+
+        var html = "";
+        html += "<body>";
+        html += "<h4>Start new node project</h4>";
+        html += "<form action='/aa' method='post'>";
+        html += "<input type='text' name='driverName' placeholder='Enter full driver name'>";
+        html += "<input type='submit' value='Add Driver'>";
+        html += "</form>";
+        html += "<form action='/kk' method='post'>";
+        html += "<input type='text' name='driverNameSeq' placeholder='Test Seq'>";
+        html += "<input type='submit' value='Add Driver Test'>";
+        html += "</form>";
+        html += "<form action='/dd' method='post'>";
+        html += "<input type='text' name='driverNameDel' placeholder='Test Del Seq'>";
+        html += "<input type='submit' value='Delete Driver'>";
+        html += "</form>";
+        html += "<form action='/edit' method='get'>";
+        html += "<input type='text' name='id' placeholder='Enter index'>";
+        html += "<input type='submit' value='Save update'>";
+        html += "</form>";
+        html += "<form action='/' method='put'>";
+        html += "<input type='text' name='whichOrderUp' placeholder='Find index'>";
+        html += "<input type='submit' value='Save update'>";
+        html += "</form>";
+        html += "<form action='/upp' method='get'>";
+        html += "<input type='text' name='whichOrderUp' placeholder='Find with  upp'>";
+        html += "<input type='submit' value='Save update'>";
+        html += "</form>";
+
+ 
+        document.getElementById("childElement").innerHTML = html;
+    </script>
+
+    <h1><%= starw%></h1>
+
+    <form action="/search" method="GET">
+        <input type="text" name="minsqr" value="Enter min sqr">
+        <input type="text" name="maxsqr" value="Enter max sqr">
+        <input type="submit" value="Search house">
+    </form>
+    
+
+</body>
+
+
+</html>
